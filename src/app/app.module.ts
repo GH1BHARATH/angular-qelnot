@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { topBarComponent } from './top-bar/top-bar.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 import { RouterModule } from '@angular/router';
 import { ProductAlertComponent } from './product-alert/product-alert.component';
 
@@ -15,7 +14,7 @@ import { ProductAlertComponent } from './product-alert/product-alert.component';
       {path:'', component:ProductListComponent}
     ]) 
   ],
-  declarations: [ AppComponent, HelloComponent ,ProductListComponent,topBarComponent,ProductAlertComponent],
+  declarations: [ AppComponent,ProductListComponent,TopBarComponent,ProductAlertComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,5 +1,29 @@
 <h2>Products</h2>
 
+<Div id="myDiv"  *ngFor="let product of products">
+<hr>
+<h3>
+  <!-- property binding -->
+  <a [title]="product.product_Name + ' Details'">
+    <!-- string interpolation (data binding) -->
+    {{ product.product_Name }}
+  </a>
+  <hr>
+  <h4>
+    <p *ngIf="product.product_id"> Description: {{ product.description }}</p>
+  </h4>
+
+  <!-- event binding -->
+  <button style="background-color:rgb(255, 0,0);" type="button" (click)="share()">Share</button>
+  &nbsp;
+
+<div>
+<app-product-alert [productFile]="product" (notify)="onNotify()"></app-product-alert>
+</div>
+
+</h3>
+</Div>
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
